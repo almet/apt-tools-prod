@@ -1,0 +1,8 @@
+#!/bin/bash
+# Script to reset the repository, without removing the gpg key.
+set -e
+set -x
+set -o pipefail
+
+rm -rf repo/db repo/public
+git checkout repo/public/fpf-apt-tools-archive-keyring.gpg
